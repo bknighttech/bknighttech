@@ -93,16 +93,9 @@ body {
 	}
 }
 
-@media screen and (max-width: 500px) {
-	.respimg {
-		width:100%;
-		height:auto;
-	}
-}
-
 @media screen and (max-width: 300px) {
 	.respimg {
 		width:100%;
-		height:auto;
+		height:300px;
 	}
 }
