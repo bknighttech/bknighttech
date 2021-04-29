@@ -1,0 +1,69 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/-icon" href="favicon.png">
+	<link rel="stylesheet" href="styles.css">
+	<title>Tab Title</title>
+
+</head>
+<body>
+	<div class="uniDiv">
+	    <h1> Title!</h1>
+	</div>
+	
+	<div class="uniDivMid">
+	    <button onclick="myFunction()">
+			<a href=#>
+				<img id="myImg" src="start.png" class="respimg">
+			</a>
+	    </button>
+	</div>
+
+	<div class="uniDiv">
+	    <h1 id="command">Press</h1>
+	    <button class="button" onclick="myFunction()">SPIN</button>	
+	</div>
+	
+	<div>
+		<img src="rf.png"  class="scroll" style="width:100px;">
+		<img src="lf.png"  class="scroll1" style="width:100px;">
+		<img src="rh.png"  class="scroll1" style="width:100px;">
+		<img src="lh.png"  class="scroll1" style="width:100px;">
+
+			
+	</div>
+
+	<script>
+	var counter=0;
+	
+	function repeat()
+	{	
+		window.setTimeout(myFunction, 150);
+	}
+	
+	function myFunction() {
+	    var pic = ["start.png","1.png","2.png","3.jpg","4.jpg","5.png","lf.png","lh.png","rf.png","rh.png"];
+	    var rand = pic[Math.floor(Math.random()*pic.length)]; 
+	    document.getElementById("myImg").src = rand;
+	    
+	    var com = ["RIGHT HAND","LEFT HAND","RIGHT FOOT","LEFT FOOT"];
+	    var randcom = com[Math.floor(Math.random()*com.length)];
+	    document.getElementById("command").innerHTML = randcom;
+	    
+	    var limb = ["rh.png","lh.png","rf.png","lf.png"];
+	    var randcom2 = limb[Math.floor(Math.random()*limb.length)];
+	    document.getElementById("limb").innerHTML = randcom2;
+	    
+	    if ((++counter)<20)
+	    repeat();
+
+	    else
+	    counter = 0;
+	  }  
+
+	</script>
+
+</body>
+</html>
