@@ -86,13 +86,6 @@ body {
 	}
 }
 
-@media screen and (max-width: 675px) {
-	.respimg {
-		width:450px;
-		height:450px;
-	}
-}
-
 @media screen and (max-width: 300px) {
 	.respimg {
 		width:100%;
