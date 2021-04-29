@@ -54,7 +54,7 @@ body {
 	height: 100px;
 	position: relative;
 	background-color: white;
-	animation-name: scrollbar;
+	animation-name: scrollbar1;
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
 }
@@ -68,6 +68,12 @@ body {
 }
 
 @keyframes scrollbar {
+  0%   {background-color:white;}
+  50%   {background-color:white;}
+  100% {background-color:white;}
+}
+
+@keyframes scrollbar1 {
   0%   {background-color:white;}
   50%   {background-color:white;}
   100% {background-color:white;}
@@ -90,21 +96,13 @@ body {
 @media screen and (max-width: 500px) {
 	.respimg {
 		width:100%;
-		height:350px;
-	}
-}
-
-
-@media screen and (max-width: 400px) {
-	.respimg {
-		width:100%;
-		height:250px;
+		height:auto;
 	}
 }
 
 @media screen and (max-width: 300px) {
 	.respimg {
 		width:100%;
-		height:150px;
+		height:auto;
 	}
 }
