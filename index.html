@@ -25,15 +25,6 @@
 	    <h1 id="command">Press</h1>
 	    <button class="button" onclick="myFunction()">SPIN</button>	
 	</div>
-	
-	<div>
-		<img src="rf.png"  class="scroll" style="width:100px;">
-		<img src="lf.png"  class="scroll1" style="width:100px;">
-		<img src="rh.png"  class="scroll1" style="width:100px;">
-		<img src="lh.png"  class="scroll1" style="width:100px;">
-
-			
-	</div>
 
 	<script>
 	var counter=0;
@@ -51,10 +42,6 @@
 	    var com = ["RIGHT HAND","LEFT HAND","RIGHT FOOT","LEFT FOOT"];
 	    var randcom = com[Math.floor(Math.random()*com.length)];
 	    document.getElementById("command").innerHTML = randcom;
-	    
-	    var limb = ["rh.png","lh.png","rf.png","lf.png"];
-	    var randcom2 = limb[Math.floor(Math.random()*limb.length)];
-	    document.getElementById("limb").innerHTML = randcom2;
 	    
 	    if ((++counter)<20)
 	    repeat();
