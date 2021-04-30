@@ -10,16 +10,16 @@
 </head>
 <body>
 	<div class="uniDiv">
-	    <h1> Title!</h1>
+	    <h1>Title!</h1>
 	</div>
 	
+	<a onclick="myFunction()">
 	<div class="uniDivMid">
-	    <button onclick="myFunction()">
-			<a href=#>
+<!--	    <button onclick="myFunction()">-->
 				<img id="myImg" src="start.png" class="respimg">
-			</a>
-	    </button>
+<!--	    </button>-->
 	</div>
+	</a>
 
 	<div class="uniDiv">
 	    <h1 id="command">Press</h1>
@@ -43,7 +43,7 @@
 	    var randcom = com[Math.floor(Math.random()*com.length)];
 	    document.getElementById("command").innerHTML = randcom;
 	    
-	    if ((++counter)<20)
+	    if ((++counter)<15)
 	    repeat();
 
 	    else
