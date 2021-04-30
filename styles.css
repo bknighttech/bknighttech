@@ -1,5 +1,5 @@
 
-body {
+body,html {
 	background-color:#3CBCBC;
 	color:white;
 }
@@ -18,38 +18,35 @@ body {
     padding:2px;
 }
 
-/*
-.button {
-    background-color:black;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align:center;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor:pointer;
+.uniDivtwist {
+	/*width:100%;*/
+	margin:0px 10px 20px 15px;
+    padding:2px;
+	border-bottom: solid black 4px;
+	border-top: solid white 4px;
+	background-color:black;
 }
-*/
 
 
 .button {
+	width:90%;
   padding: 15px 25px;
   font-size: 24px;
   text-align: center;
   cursor: pointer;
   outline: none;
   color: #fff;
-  background-color: #04AA6D;
+  background-color: red; /*#04AA6D;*/
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
+  margin-bottom:40px;
 }
 
-.button:hover {background-color: #3e8e41}
+.button:hover {background-color: #a34235}
 
 .button:active {
-  background-color: #3e8e41;
+  background-color:#380801 ;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
@@ -75,18 +72,29 @@ body {
   100% {background-color:red;}
 }
 
-/*
-#myImg {
+.twister {
+	width:200px;
+	height:200px;
+	margin-bottom:40px;
+	position:relative;
 	transform:rotate(0deg);
 	animation-name: spinner;
-	animation-duration: 20s;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
 }
 
 @keyframes spinner {
-	0%{transform:rotate(0deg);}
-	100%{transform:rotate(360deg);}
+	0%{transform:rotate(0deg);left:0px;top:0px;transform:rotateY(0deg);}
+	10%{transform:rotate(15deg);left:30%;}
+	20%{transform:rotate(0deg);left:50%;}
+	30%{transform:rotate(10deg);left:20%;}
+	40%{transform:rotate(0deg);left:30%;}
+	50%{transform:rotate(0deg);left:50%;top:50px;}
+	70%{transform:rotate(10deg);left:20%;}
+	80%{transform:rotate(0deg);left:30%;}
+	90%{transform:rotate(15deg);left:20%;}
+	100%{transform:rotate(0deg);left:0%;top:0px;}
 }
-*/
 
 
 
@@ -99,15 +107,26 @@ body {
 
 @media screen and (max-width: 650px) {
 	.respimg {
-		width:60%;
-		height:60%;
-	}
-}
-
-@media screen and (max-width: 300px) {
-	.respimg {
 		width:75%;
 		height:75%;
 	}
 }
 
+
+@media screen and (max-width: 300px) {
+	.respimg {
+		width:100%;
+		height:100%;
+	}
+}
+
+#rules {
+	text-align:center;
+	font-size:20px;
+	background:black;
+}
+
+#footlink {
+	text-decoration:none;
+	color: white;
+}
