@@ -13,6 +13,11 @@
 	    <h1>Happy Birthday John/Jane Doe!</h1>
 	</div>
 	
+	<div class="uniDiv" style="margin-bottom: 0px;">
+	    <h1 id="command">...Or Press Spin Button</h1>
+	    <button class="button" onclick="myFunction()">SPIN BUTTON</button>	
+	</div>
+	
 	<a onclick="myFunction()">
 	<div class="uniDivMid">
 <!--	    <button onclick="myFunction()">-->
@@ -21,13 +26,10 @@
 	</div>
 	</a>
 
-	<div class="uniDiv">
-	    <h1 id="command">...Or Press Spin Button</h1>
-	    <button class="button" onclick="myFunction()">SPIN BUTTON</button>	
-	</div>
+
 	
 	<div class="uniDivtwist">
-		<img src="twhite.png" class="twister">
+		<!--<img src="twhite.png" class="twister">    -->
 		<p id="rules"><u><b>General Rules:</b></u><br><br>
 			Mission: Outlast players by only putting hands and feet on the pictures according to the spinner.<br><br>
 			
@@ -63,23 +65,31 @@
 	
 	function repeat()
 	{	
-		window.setTimeout(myFunction, 150);
+		window.setTimeout(myFunction, 100);
 	}
 	
 	function myFunction() {
-	    var pic = ["start.png","1.png","2.png","3.jpg","4.jpg","5.png","lf.png","lh.png","rf.png","rh.png"];
+	    var pic = ["p1.jpg","p2.jpg","p3.jpg","p4.jpg","p5.jpg","p6.jpg","p7.jpg","p8.jpg","p9.jpg","p10.jpg","p11.jpg","p12.jpg"];
 	    var rand = pic[Math.floor(Math.random()*pic.length)]; 
 	    document.getElementById("myImg").src = rand;
 	    
+	    
+	    
 	    var com = ["RIGHT HAND","LEFT HAND","RIGHT FOOT","LEFT FOOT"];
 	    var randcom = com[Math.floor(Math.random()*com.length)];
-	    document.getElementById("command").innerHTML = randcom;
 	    
-	    if ((++counter)<15)
+	    var randcom1 = "DONE ";
+	    document.getElementById("command").innerHTML = "~SPINNING~";//+randcom;
+	    
+	    if (counter<8){
 	    repeat();
-
-	    else
-	    counter = 0;
+	    counter = counter+1;
+	    }
+		
+		else {
+			counter = 0;
+			document.getElementById("command").innerHTML = randcom+" on:";
+		}
 	 }  
 
 	</script>
