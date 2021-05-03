@@ -54,6 +54,7 @@ body,html {
 .respimg {
 	/*width:700px;
 	height:700px;*/
+	cursor: pointer;
 	height:50%;
 	width:50%;
 	background-color:lightgray;
@@ -120,7 +121,7 @@ body,html {
 }
 
 #rules {
-	text-align:center;
+	text-align:left;
 	font-size:20px;
 	background:black;
 }
